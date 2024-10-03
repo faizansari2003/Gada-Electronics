@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horcard</title>
+    <style>
+        *{
+            margin: 0;
+            background-color: white;
+        }
+
+
+        nav{
+            margin: 0;
+            background-color: rgb(59, 54, 54);
+            top: 0;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            padding:20px 40px 20px 40px;
+            position: sticky;
+            z-index: 40;
+        }
+
+
+        .nav h1{
+            background-color:rgb(59, 54, 54);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            ;
+            font-weight: bolder;
+            transition: transform 0.1s ease;        
+        }
+
+        .nav h1:hover {
+            transform: scale(1.06);
+        }
+
+
+        .nav h1 a{
+            background-color: rgb(59, 54, 54);
+            color:white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        ul{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            background-color:rgb(59, 54, 54);
+            transition: transform 0.1s ease;        
+        }
+
+        li:hover {
+            transform: scale(1.09);
+        }
+
+
+        nav ul li{
+            padding: 5px;
+            border-radius: 7px;
+            cursor: pointer;
+            box-shadow:0px 0px 8px black;
+            background-color:#0892D0 ;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+        }
+
+
+        nav2 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color:#0892D0 ;
+            padding: 10px;
+            align-items: center;
+            margin-left: 400px;
+            margin-right: 400px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0px 3px 5px rgb(104, 97, 97);
+        }
+
+
+        nav2 h1{
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+            background-color:#0892D0 ;
+            font-size: 35px;
+            color:white;
+            text-transform: uppercase;
+            text-shadow: 0px 1px 4px black;
+            
+        }
+
+
+        .laptop{
+            
+            background-color: #0892D0 ;
+            height:300px;
+            margin-top: 40px;
+            margin-right: 40px;
+            margin-left: 40px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0px 0px 10px black;
+            transition: transform 0.2s ease;        
+        }
+
+        .laptop:hover {
+            transform: scale(1.03);
+            
+        }
+        
+
+        .laptop img{
+            background-color: #0892D0 ;
+            height: 200px;
+            width: 500px;
+            box-shadow:0px 0px 20px black;
+            margin-left:50px;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+
+
+        .laptop h1{
+            background-color: #0892D0 ;
+            display: flex;
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+            margin-right:200px;
+            margin-top: 100px;
+            font-size: 50px;
+
+        }
+
+        
+        .laptop h1 a{
+            cursor: pointer;
+            background-color: #0892D0 ;
+            display: flex;
+            color: black;
+            margin-right:20px;
+            font-size: 50px;
+            text-decoration: none;
+            margin-bottom:80px;
+            padding:5px
+        }
+
+       
+        .smartphone{
+            height:300px;
+            background-color: #0892D0 ;
+            margin-top: 40px;
+            margin-right: 40px;
+            margin-left: 40px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            box-shadow: 0px 0px 10px black;
+            transition: transform 0.2s ease;        
+        }
+
+
+        .smartphone:hover {
+            transform: scale(1.03);
+        }
+
+
+        .smartphone img{
+            background-color: #0892D0 ;
+            height: 200px;
+            width: 500px;
+            box-shadow: 0px 0px 20px black;
+            margin-left:50px;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+
+
+        .smartphone h1{
+            background-color: #0892D0 ;
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+            display: flex;
+            margin-right:200px;
+            margin-top: 100px;
+            font-size: 50px;
+        }
+
+
+        .smartphone h1 a{
+            cursor: pointer;
+            background-color: #0892D0 ;
+            display: flex;
+            color: black;
+            margin-right:20px;
+            font-size: 50px;
+            text-decoration: none;
+            margin-bottom:80px;
+            padding:5px
+        }
+
+        
+        .tablets{
+            height:300px;
+            background-color: #0892D0 ;
+            margin-top: 40px;
+            margin-right: 40px;
+            margin-left: 40px;
+            margin-bottom:40px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            box-shadow: 0px 0px 10px black;
+            transition: transform 0.2s ease;        
+        }
+
+
+
+        .tablets:hover {
+            transform: scale(1.03);
+        }
+
+
+        
+        .tablets img{
+            background-color: darkgray;
+            height: 200px;
+            width: 500px;
+            box-shadow: 0px 0px 20px black;
+            margin-left:50px;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+
+
+        .tablets h1{
+            background-color: #0892D0 ;
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+            display: flex;
+            margin-right:200px;
+            margin-top: 100px;
+            font-size: 50px;
+        }
+
+
+        .tablets h1 a{
+            cursor: pointer;
+            background-color: #0892D0 ;
+            display: flex;
+            color: black;
+            margin-right:20px;
+            font-size: 50px;
+            text-decoration: none;
+            margin-bottom:80px;
+            padding:5px
+        }
+
+        
+        footer{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(59, 54, 54);
+        }
+
+
+        footer h4{
+            background-color: rgb(59, 54, 54);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            display: inline;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="nav">
+      <h1>
+        <a href="index.html">Gada Electronics</a>
+    </h1>
+      <div>
+        <ul>
+          <a href="profile.html" style="text-decoration: none;border-radius: 7px;"><li>Profile</li>
+          <a href="wishlist.html" style="text-decoration: none;border-radius: 7px;"><li>Wishlist</li></a>
+          <a href="addtocart.html" style="text-decoration: none;border-radius: 7px;"><li>Cart</li></a>
+        </ul>
+      </div>
+    </nav>
+    <nav2>
+        <div>
+            <h1>Welcome to Gada Electronics</h1>
+        </div>
+    </nav2>
+
+    <a href="laptoplist.html" style="text-decoration: none;color:black">
+    <div class="laptop">
+        <img src="https://www.gizbot.com/img/2020/03/best-ultra-hd-screen-laptops-to-buy-in-india-1585652594.jpg">
+        <h1>
+            Laptops
+        </h1>
+    </div>
+    </a>
+    <a href="smartphonelist.html" style="text-decoration: none;color:black">
+    <div class="smartphone">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyN_iM8zaplUnWH7gAufXeX_zpMtDKW-s2_A&s">
+        <h1>
+            Smartphones
+        </h1>
+
+    </div>
+    </a>
+    <a href="tabletslist.html" style="text-decoration: none;color:black">
+    <div class="tablets">
+        <img src="https://preview.redd.it/what-is-the-advantage-of-an-android-tablet-over-a-windows-v0-oviljm63z0sa1.jpg?width=640&crop=smart&auto=webp&s=be3fd7f78e04a9057cdc5a71c92dfbbc2a71ca99">
+        <h1>
+            Tablets
+        </h1>
+
+    </div>
+    </a>
+    <footer>
+        <h4>Thank you for visiting the website</h4>
+      </footer>
+    
+</body>
+</html>
